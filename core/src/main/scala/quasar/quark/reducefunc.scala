@@ -21,7 +21,7 @@ object ReduceFunc {
   }
 
   def max[A <: Type]: ReduceFunc[A, A] = new ReduceFunc[A, A] {
-    def apply[G[_]: ReduceOps](v: G[A]): G[A] = ReduceOps[G].min(v)
+    def apply[G[_]: ReduceOps](v: G[A]): G[A] = ReduceOps[G].max(v)
   }
 
   def arbitrary[A <: Type]: ReduceFunc[A, A] = new ReduceFunc[A, A] {
